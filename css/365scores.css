@@ -1,0 +1,201 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: #21282d; }
+  body.slide {
+    position: fixed;
+    overflow: hidden;
+    width: 100%; }
+
+.main-content-wrapper {
+  padding: 0 10px; }
+
+a {
+  text-decoration: none;
+  color: #ffffff; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    margin: 0;
+    list-style-type: none; }
+
+.header {
+  background-color: #081621;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px; }
+
+.logo-wrapper {
+  padding: 20px 25px;
+  float: left; }
+
+.overlay {
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer; }
+
+.sidebar {
+  background-color: #2e373e;
+  position: fixed;
+  left: 0;
+  top: 90px;
+  width: 170px;
+  height: 100%;
+  padding-top: 20px;
+  z-index: 101; }
+  .sidebar ul {
+    padding: 0 25px; }
+    .sidebar ul li {
+      font-size: 20px;
+      padding: 20px 0; }
+    .sidebar ul li.current a {
+      color: #18b5e2; }
+
+.open-menu {
+  float: right;
+  padding: 9px 10px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #081621;
+  margin: 20px 20px 0 0;
+  display: none; }
+  .open-menu span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background: #fff;
+    margin-bottom: 5px;
+    display: block; }
+    .open-menu span:last-child {
+      margin-bottom: 0; }
+
+.main-section {
+  margin-left: 170px;
+  margin-top: 130px; }
+
+.centered-box, .scores-box {
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%; }
+  .centered-box .day-grouping, .scores-box .day-grouping {
+    text-align: center;
+    font-size: 24px;
+    margin: 40px 0 30px 0;
+    color: #5d93ad; }
+
+.scores-box {
+  border-radius: 8px;
+  background-color: #2e373e;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.35);
+  margin-bottom: 20px; }
+  .scores-box .scores-box-header {
+    color: #18b5e2;
+    font: 20px;
+    background-color: #272f35;
+    border-radius: 8px 8px 0 0;
+    line-height: 50px;
+    padding: 0 3%; }
+    .scores-box .scores-box-header img {
+      float: left;
+      padding: 15px 15px 15px 0; }
+    .scores-box .scores-box-header h3 {
+      margin: 0;
+      font-weight: normal; }
+  .scores-box .scores-box-row {
+    height: 90px;
+    border-bottom: solid 1px #21282d;
+    clear: both; }
+    .scores-box .scores-box-row .logo1, .scores-box .scores-box-row .logo2, .scores-box .scores-box-row .side1, .scores-box .scores-box-row .side2, .scores-box .scores-box-row .status-wrapper {
+      float: left; }
+    .scores-box .scores-box-row .logo1, .scores-box .scores-box-row .logo2 {
+      width: 4%;
+      padding: 30px 3%; }
+      .scores-box .scores-box-row .logo1 img, .scores-box .scores-box-row .logo2 img {
+        width: 100%; }
+    .scores-box .scores-box-row .side1, .scores-box .scores-box-row .side2 {
+      width: 30%;
+      line-height: 80px;
+      font-size: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .scores-box .scores-box-row .status-wrapper {
+      width: 20%;
+      text-align: center; }
+      .scores-box .scores-box-row .status-wrapper .score {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 44px;
+        color: #18b5e2; }
+      .scores-box .scores-box-row .status-wrapper .extra {
+        line-height: 20px;
+        color: #5d93ad; }
+      .scores-box .scores-box-row .status-wrapper .status {
+        color: #5d93ad;
+        font-size: 22px; }
+      .scores-box .scores-box-row .status-wrapper .live {
+        background-color: #ce1126;
+        padding: 2px 9px;
+        border-radius: 10px; }
+    .scores-box .scores-box-row .status-past .score {
+      padding-top: 0; }
+    .scores-box .scores-box-row .status-future .score {
+      padding-top: 20px; }
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+.clearfix:after {
+  clear: both; }
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    display: none !important; }
+
+  body.slide {
+    position: static;
+    overflow: auto; }
+
+  .sidebar {
+    left: 0 !important; } }
+@media screen and (max-width: 767px) {
+  .sidebar {
+    left: -170px; }
+
+  .main-section {
+    margin-left: 0; }
+
+  .visible-xs {
+    display: inline-block !important; }
+
+  .scores-box .scores-box-row {
+    height: auto; }
+    .scores-box .scores-box-row .logo1, .scores-box .scores-box-row .logo2 {
+      width: 10%; }
+    .scores-box .scores-box-row .side1 {
+      width: 84%; }
+    .scores-box .scores-box-row .side2 {
+      float: right;
+      width: 84%;
+      text-align: left; }
+    .scores-box .scores-box-row .status-wrapper {
+      width: 100%; }
+    .scores-box .scores-box-row .status-past .score {
+      padding-top: 0; } }
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .centered-box, .scores-box, .scores-box {
+    width: calc(100% - 40px); } }
+
+/*# sourceMappingURL=365scores.css.map */
