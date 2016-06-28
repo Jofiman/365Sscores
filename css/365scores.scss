@@ -199,8 +199,16 @@ ul {
       .status {
         color: $secondary-highlighted-color;
           font-size: 22px;
+          margin-top: 12px;
       }
-
+        .time-status {
+            margin-top: 25px;
+            display: block;
+      }
+        .finished {
+            margin-top: 12px;
+            display: block;
+        }
       .live {
         background-color: $alert-color;
         padding: 2px 9px;
