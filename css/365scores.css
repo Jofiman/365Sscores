@@ -144,7 +144,14 @@ ul {
         color: #5d93ad; }
       .scores-box .scores-box-row .status-wrapper .status {
         color: #5d93ad;
-        font-size: 22px; }
+        font-size: 22px;
+        margin-top: 12px; }
+      .scores-box .scores-box-row .status-wrapper .time-status {
+        margin-top: 25px;
+        display: block; }
+      .scores-box .scores-box-row .status-wrapper .finished {
+        margin-top: 12px;
+        display: block; }
       .scores-box .scores-box-row .status-wrapper .live {
         background-color: #ce1126;
         padding: 2px 9px;
