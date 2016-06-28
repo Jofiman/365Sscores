@@ -26,11 +26,10 @@
         <li><a href="">Highlights</a></li>
         <li><a href="">Videos</a></li>
         <li><a href="">My Profile</a></li>
-    </ul>
+    </ul> 
 
 </div>
 <div class="main-section" ng-controller="liveScoreController" ng-cloak>
-{{errorMessage}}
     <!-- Sunday, 27 March -->
     
     <div class="main-content-wrapper">
@@ -55,9 +54,9 @@
                <div class="extra" ng-if="games.Active !== false && games.GT < 46">First Half</div>
                 <div class="extra" ng-if="games.Active !== false && games.GT > 45">Second Half</div>
                 <div class="score">
-                   <span ng-if="games.Active === false">{{games.Scrs[0]}} - {{games.Scrs[1]}}</span>
+                   <span class="finished" ng-if="games.Active === false && games.GT > 0">{{games.Scrs[0]}} - {{games.Scrs[1]}}</span>
                    <span ng-if="games.Active === true">{{games.Scrs[0]}} - {{games.Scrs[1]}}</span>
-                   <span ng-if="games.Active == false && games.GT == -1">{{games.Time}}</span>
+                   <span class="time-status" ng-if="games.Active == false && games.GT == -1">{{games.Time}}</span>
                 </div>
                 <span class="status" ng-if="games.Active === false && games.GT == 90">Finished</span>
                 <span class="live" ng-if="games.Active === true">LIVE - '{{games.GT}}</span>
@@ -72,158 +71,6 @@
         </div>
     </div>
     </div>
-    <!-- Today 
-    <div class="centered-box">
-        <div class="day-grouping">
-            Today
-        </div>
-    </div>
-    <div class="scores-box">
-        <div class="scores-box-header">
-            <img src="images/logo.png" width="30" height="20">
-            <h3>Serie A</h3>
-        </div>
-        <div class="scores-box-row clearfix">
-            <div class="logo1">
-                <img src="images/logo.png">
-            </div>
-            <div class="side1">
-                FC Barcelona
-            </div>
-            <div class="status-wrapper">
-                <div class="extra">Second Half</div>
-                <div class="score">
-                    0-1
-                </div>
-                <span class="live">LIVE - '55</span>
-            </div>
-            <div class="side2">
-                FC Bayern Munchen
-            </div>
-            <div class="logo2">
-                <img src="images/logo.png">
-            </div>
-        </div>
-        <div class="scores-box-row clearfix">
-            <div class="logo1">
-                <img src="images/logo.png">
-            </div>
-            <div class="side1">
-                Chelsea
-            </div>
-            <div class="status-wrapper">
-                <div class="extra">First Half</div>
-                <div class="score">
-                    1-1
-                </div>
-                <span class="live">LIVE - '20</span>
-            </div>
-            <div class="side2">
-                Roma
-            </div>
-            <div class="logo2">
-                <img src="images/logo.png">
-            </div>
-        </div>
-    </div>
-    <div class="scores-box">
-        <div class="scores-box-header">
-            <img src="images/logo.png" width="30" height="20">
-            <h3>Champions League</h3>
-        </div>
-        <div class="scores-box-row clearfix">
-            <div class="logo1">
-                <img src="images/logo.png">
-            </div>
-            <div class="side1">
-                FC Barcelona
-            </div>
-            <div class="status-wrapper status-future">
-                <div class="score">
-                    19:45
-                </div>
-            </div>
-            <div class="side2">
-                FC Bayern Munchen
-
-            </div>
-            <div class="logo2">
-                <img src="images/logo.png">
-            </div>
-        </div>
-        <div class="scores-box-row clearfix">
-            <div class="logo1">
-                <img src="images/logo.png">
-            </div>
-            <div class="side1">
-                Chelsea
-            </div>
-            <div class="status-wrapper status-future">
-                <div class="score">
-                    20:00
-                </div>
-            </div>
-            <div class="side2">
-                Roma
-            </div>
-            <div class="logo2">
-                <img src="images/logo.png">
-            </div>
-        </div>
-    </div>
--->
-    <!-- Tomorrow 
-    <div class="centered-box">
-        <div class="day-grouping">
-            Tomorrow
-        </div>
-    </div>
-    <div class="scores-box">
-        <div class="scores-box-header">
-            <img src="images/logo.png" width="30" height="20">
-            <h3>Champions League</h3>
-        </div>
-        <div class="scores-box-row clearfix">
-            <div class="logo1">
-                <img src="images/logo.png">
-            </div>
-            <div class="side1">
-                FC Barcelona
-            </div>
-            <div class="status-wrapper status-future">
-                <div class="score">
-                    12:40
-                </div>
-            </div>
-            <div class="side2">
-                FC Bayern Munchen
-
-            </div>
-            <div class="logo2">
-                <img src="images/logo.png">
-            </div>
-        </div>
-        <div class="scores-box-row clearfix">
-            <div class="logo1">
-                <img src="images/logo.png">
-            </div>
-            <div class="side1">
-                Chelsea
-            </div>
-            <div class="status-wrapper status-future">
-                <div class="score">
-                    12:40
-                </div>
-            </div>
-            <div class="side2">
-                Roma
-            </div>
-            <div class="logo2">
-                <img src="images/logo.png">
-            </div>
-        </div>
-    </div>
-    -->
     
     
 </div>
